@@ -39,3 +39,8 @@ void callback(char* topic, byte* payload, unsigned int length) {
   }
 
 }
+
+void reconnect() {
+  // Loop until we're reconnected
+  
+}
