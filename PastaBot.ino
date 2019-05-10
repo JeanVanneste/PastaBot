@@ -95,7 +95,7 @@ const int platePin = 53;
 
 void setup() {
   // pasta
-  state = fillSalt;
+  state = wait;
   ax12a.begin(BaudRate, DirectionPin, &Serial);
   ax12a.setEndless(ID, ON);
   
@@ -156,11 +156,30 @@ void loop() {
             }
     switch (state) {
         case wait:
-            Serial.println("State wait");
+            //Serial.println("State wait");
             // statements
             
             //wait change on tim
             //by mqtt
+            if (!client.connected()) {
+              while (!client.connected()) {
+    Serial.print("Attempting MQTT connection...");
+    // Attempt to connect
+    if (client.connect("arduinoClient")) {
+      Serial.println("connected");
+      // Once connected, publish an announcement...
+      client.publish(outTopic,"hello world");
+      // ... and resubscribe
+      client.subscribe(inTopic);
+    } else {
+      Serial.print("failed, rc=");
+      Serial.print(client.state());
+      Serial.println(" try again in 5 seconds");
+      // Wait 5 seconds before retrying
+      delay(5000);
+    }
+  }
+            }
             client.loop();            
             //by the pad
             
@@ -185,7 +204,7 @@ void loop() {
         case fillSalt:
             Serial.println("State fill salt");
             dispenseSalt();
-            //state = turnToPot;
+            state = turnToPot;
             break;
         case turnToPot:
         //marche pas
