@@ -1,0 +1,41 @@
+Removed Pin From Net: NetName=-6V Pin=U1-4
+Removed Pin From Net: NetName=+6V Pin=U1-7
+Removed Pin From Net: NetName=NetPT100_1 Pin=U2-3
+Removed Pin From Net: NetName=-6V Pin=U2-4
+Removed Pin From Net: NetName=+6V Pin=U2-7
+Removed Pin From Net: NetName=-6V Pin=U3-4
+Removed Pin From Net: NetName=+6V Pin=U3-7
+Added Component: Designator=*(DIP14)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=Net*_1 Pin=*-1
+Added Pin To Net: NetName=Net*_1 Pin=R6-2
+Added Pin To Net: NetName=Net*_1 Pin=R7-1
+Added Net: Name=Net*_1
+Added Pin To Net: NetName=Net*_2 Pin=*-2
+Added Pin To Net: NetName=Net*_2 Pin=R5-2
+Added Pin To Net: NetName=Net*_2 Pin=R6-1
+Added Net: Name=Net*_2
+Added Pin To Net: NetName=Net*_3 Pin=*-3
+Added Pin To Net: NetName=Net*_3 Pin=R1-1
+Added Pin To Net: NetName=Net*_3 Pin=Roff-1
+Added Net: Name=Net*_3
+Added Pin To Net: NetName=Net*_6 Pin=*-6
+Added Pin To Net: NetName=Net*_6 Pin=R4-2
+Added Pin To Net: NetName=Net*_6 Pin=R5-1
+Added Net: Name=Net*_6
+Added Pin To Net: NetName=Net*_7 Pin=*-7
+Added Pin To Net: NetName=Net*_7 Pin=R4-1
+Added Pin To Net: NetName=Net*_7 Pin=R8-1
+Added Net: Name=Net*_7
+Added Pin To Net: NetName=Net*_8 Pin=*-8
+Added Pin To Net: NetName=Net*_8 Pin=Out-1
+Added Pin To Net: NetName=Net*_8 Pin=R9-2
+Added Net: Name=Net*_8
+Added Pin To Net: NetName=Net*_9 Pin=*-9
+Added Pin To Net: NetName=Net*_9 Pin=R7-2
+Added Pin To Net: NetName=Net*_9 Pin=R9-1
+Added Net: Name=Net*_9
+Added Pin To Net: NetName=Net*_10 Pin=*-10
+Added Pin To Net: NetName=Net*_10 Pin=R8-2
+Added Pin To Net: NetName=Net*_10 Pin=R10-2
+Added Net: Name=Net*_10
