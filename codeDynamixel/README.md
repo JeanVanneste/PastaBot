@@ -1,4 +1,4 @@
-##Dynamixel
+# Dynamixel
 
 Most of the informations are from Eurobot R&D.
 
