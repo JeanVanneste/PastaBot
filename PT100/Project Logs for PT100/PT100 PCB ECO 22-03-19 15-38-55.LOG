@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=+6V Pin=*-4
+Added Pin To Net: NetName=NetPT100_1 Pin=*-5
+Added Pin To Net: NetName=-6V Pin=*-11
+Change Net Name : Old Net Name=NetPT100_1 New Net Name=Net*_5

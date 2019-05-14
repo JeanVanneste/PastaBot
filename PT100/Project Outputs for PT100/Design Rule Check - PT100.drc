@@ -1,0 +1,53 @@
+Protel Design System Design Rule Check
+PCB File : D:\Projects\PT100\PT100.PcbDoc
+Date     : 22-03-19
+Time     : 15:53:02
+
+Processing Rule : Clearance Constraint (Gap=24mil) ((isTrack)),((isTrack))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=12mil) ((IsTrack)),((IsPad AND( HasFootprint('DIP*'))))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=24mil) ((isTrack)),((isPad))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=24mil) ((IsPad)),((IsPad))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=40mil) (All),(All)
+   Violation between Clearance Constraint: (38.126mil < 40mil) Between Text "ECAM" (325mil,50mil) on Bottom Layer And Track (375mil,50mil)(375mil,175mil) on Keep-Out Layer 
+   Violation between Clearance Constraint: (38.126mil < 40mil) Between Text "ECAM" (325mil,50mil) on Bottom Layer And Track (375mil,50mil)(3900mil,50mil) on Keep-Out Layer 
+   Violation between Clearance Constraint: (34.403mil < 40mil) Between Text "ECAM" (325mil,50mil) on Bottom Layer And Track (50mil,175mil)(375mil,175mil) on Keep-Out Layer 
+   Violation between Clearance Constraint: (34.403mil < 40mil) Between Text "ECAM" (325mil,50mil) on Bottom Layer And Track (50mil,175mil)(50mil,1950mil) on Keep-Out Layer 
+   Violation between Clearance Constraint: (34.596mil < 40mil) Between Text "ECAM" (50mil,50mil) on Top Layer And Track (375mil,50mil)(375mil,175mil) on Keep-Out Layer 
+   Violation between Clearance Constraint: (34.596mil < 40mil) Between Text "ECAM" (50mil,50mil) on Top Layer And Track (375mil,50mil)(3900mil,50mil) on Keep-Out Layer 
+   Violation between Clearance Constraint: (34.403mil < 40mil) Between Text "ECAM" (50mil,50mil) on Top Layer And Track (50mil,175mil)(375mil,175mil) on Keep-Out Layer 
+   Violation between Clearance Constraint: (34.403mil < 40mil) Between Text "ECAM" (50mil,50mil) on Top Layer And Track (50mil,175mil)(50mil,1950mil) on Keep-Out Layer 
+Rule Violations :8
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=16mil) (Max=1000mil) (Preferred=24mil) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=24mil) (Max=1000mil) (Preferred=40mil) (InNet('VCC'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=24mil) (Max=1000mil) (Preferred=40mil) (InNet('GND'))
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=17.716mil) (Max=21.654mil) (All)
+Rule Violations :0
+
+
+Violations Detected : 8
+Waived Violations : 0
+Time Elapsed        : 00:00:01

@@ -1,6 +1,7 @@
 #include <Keypad.h>
 #include <LiquidCrystal.h>
 
+// We create an enum wich contains all the phases. That way, we can use the mnemonics instead of a integer
 enum message {welcome, timer, confirm, waitingBoiling, infoDisplay, endCooking} phase;
 
 // LiquidCrystal(rs, enable, d0, d1, d2, d3, d4, d5, d6, d7) 
@@ -9,6 +10,7 @@ LiquidCrystal lcd(23, 25, 27, 29, 31, 33, 35, 37, 39, 41);
 const byte ROWS = 4; 
 const byte COLS = 4; 
 
+// The map of the keypad
 const char hexaKeys[ROWS][COLS] = {
   {1, 2, 3, 'A'},
   {4, 5, 6, 'B'},
@@ -28,6 +30,7 @@ bool timeFlag = false;
 
 Keypad keypad = Keypad(makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS);
 
+// We set a serial connection for debugging and we set the phase to the welcome
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
@@ -39,8 +42,10 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // We read the keypad every to not miss any pressing
   readKeypad();
+  // We want the lcdscreen to be updated every second and not at each iteration of loop() to avoid glittering of the screen 
+  // We also use this opportunity to update the remaining time
   if (millis() - beginTime >= 1000){
     writeToLCD();
     beginTime = millis();
@@ -52,6 +57,8 @@ void loop() {
   }
 }
 
+// This function describe which action should be applied when a touch is pressed
+// To upgrade with different comportement for each phase
 void readKeypad(){
   char customKey = keypad.getKey();
   
@@ -71,6 +78,7 @@ void readKeypad(){
   }
 }
 
+// This function describe what should be written on the screen 
 void writeToLCD()
 {
   switch(phase){
@@ -141,6 +149,7 @@ void writeToLCD()
   }
 }
 
+//Not used for the moment
 char convertToCharacter(char i) {
   return (i + '0');
 }
@@ -155,6 +164,7 @@ int convertToInt(char tensDigit, char unitDigit){
   }
 }
 
+// convert a duration in minute to a duration in seconds
 unsigned long convertMinToSec(int minute){
   return 60*minute;
 }
