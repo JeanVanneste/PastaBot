@@ -4,7 +4,9 @@ You can find here all the code that have been used for the Pasta Bot project.
 
 The .ino files at the root of the repository are the final files of the source that were uploaded on the Arduino Mega.
 
-If you want to have better comments, you can go in the differents folders were you will have the code of each task before the fusion for the demo.
+If you want to have better comments, you can go in the differents folders were you will have the code of each task before the fusion for the demo.*
+
+MQTT doc and Dynamixel doc are on the folders of the individual codes.
 
 ## PT100
 
