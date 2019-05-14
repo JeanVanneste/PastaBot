@@ -24,10 +24,10 @@ You'll need to create an PubSubClient object
 PubSubClient client(server, 1883, callback, ethClient);
 ```
 
-..* The server, is the brocker mqtt
-..* The default port for mqtt is 1883
-..* The callback function, we'll talk about it later
-..* The Ethernet client object, from the shield
+* The server, is the brocker mqtt
+* The default port for mqtt is 1883
+* The callback function, we'll talk about it later
+* The Ethernet client object, from the shield
 
 You'll also need to copy-paste the reconnect function, because arduino's ethernet shield is not reliable and you'll need te reconect often.
 
